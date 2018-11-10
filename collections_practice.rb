@@ -67,7 +67,7 @@ def organize_schools(collection)
   #
   # organized
   organized = {}
-  all_local = collection.collect {|school, local| loca}
+  all_local = collection.collect {|school, local| local[:location]}
   collection.each do |school, local|
     return all_local.include?(local[:location])
     organized[local[:location]] = []
