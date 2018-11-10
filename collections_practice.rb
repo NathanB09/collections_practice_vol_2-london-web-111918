@@ -51,7 +51,7 @@ def organize_schools(collection)
   # new_york = []
   # chicago = []
   # san_fran = []
-  # 
+  #
   # collection.each do |each_hash|
   #   if each_hash[1].values.join == "NYC"
   #     new_york << each_hash[0]
@@ -64,7 +64,7 @@ def organize_schools(collection)
   #     organized["SF"] = san_fran
   #   end
   # end
-  # 
+  #
   # organized
   organized = {}
   all_locations = []
@@ -77,4 +77,5 @@ def organize_schools(collection)
       end
     end
   end
+  organized
 end
