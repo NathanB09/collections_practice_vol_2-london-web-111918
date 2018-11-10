@@ -70,10 +70,10 @@ def organize_schools(collection)
   all_locations = []
   collection.each do |school, location|
     all_locations = location.values.uniq
-    organized[place] = []
+    organized[location[:location]] = []
     all_locations.each do |place|
       if location[:location] == place
-        organized[place] << school
+        organized[location[:location]] << school
       end
     end
   end
