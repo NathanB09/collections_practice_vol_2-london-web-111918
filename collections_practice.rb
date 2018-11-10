@@ -67,15 +67,11 @@ def organize_schools(collection)
   #
   # organized
   organized = {}
-  all_locations = collection.collect {|school, location| location[:location]}.uniq
-  all_locations.each do |place|
-    collection.each do |school, location|
-      organized[location[:location]] = []
-      if location[:location] == place
-        organized[location[:location]] << school
-      end
+  collection.each do |school, location|
+    organized[location[:location]] = []
+    if location.include?(location[:location])
+      organized[location[:location]] << school
     end
   end
   organized
-  all_locations
 end
