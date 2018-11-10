@@ -77,4 +77,5 @@ def organize_schools(collection)
     end
   end
   organized
+  all_locations
 end
