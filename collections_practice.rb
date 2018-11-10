@@ -47,23 +47,34 @@ def find_cool(collection)
 end
 
 def organize_schools(collection)
+  # organized = {}
+  # new_york = []
+  # chicago = []
+  # san_fran = []
+  # 
+  # collection.each do |each_hash|
+  #   if each_hash[1].values.join == "NYC"
+  #     new_york << each_hash[0]
+  #     organized["NYC"] = new_york
+  #   elsif each_hash[1].values.join == "Chicago"
+  #     chicago << each_hash[0]
+  #     organized["Chicago"] = chicago
+  #   elsif each_hash[1].values.join == "SF"
+  #     san_fran << each_hash[0]
+  #     organized["SF"] = san_fran
+  #   end
+  # end
+  # 
+  # organized
   organized = {}
-  new_york = []
-  chicago = []
-  san_fran = []
-
-  collection.each do |each_hash|
-    if each_hash[1].values.join == "NYC"
-      new_york << each_hash[0]
-      organized["NYC"] = new_york
-    elsif each_hash[1].values.join == "Chicago"
-      chicago << each_hash[0]
-      organized["Chicago"] = chicago
-    elsif each_hash[1].values.join == "SF"
-      san_fran << each_hash[0]
-      organized["SF"] = san_fran
+  all_locations = []
+  collection.each do |school, location|
+    all_locations = location.values.uniq
+    organized[place] = []
+    all_locations.each do |place|
+      if location[:location] == place
+        organized[place] << school
+      end
     end
   end
-
-  organized
 end
